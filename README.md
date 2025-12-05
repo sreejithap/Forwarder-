@@ -1,6 +1,7 @@
 Notes
 
-```oc patch ingresscontroller/default -n openshift-ingress-operator \
+```
+oc patch ingresscontroller/default -n openshift-ingress-operator \
   --type=merge \
   --patch='{"spec":{"logging":{"access":{"destination":{"type":"Container"},"httpLogFormat":"%ci:%cp [%tr] %ft %b/%s %TR/%Tw/%Tc/%Tr/%Ta %ST %B %CC %CS %tsc %ac/%fc/%bc/%sc/%rc %sq/%bq %hr %hs {%[capture.req.hdr(0)]} %{+Q}r"}}}}'
 ```
